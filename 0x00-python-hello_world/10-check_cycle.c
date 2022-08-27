@@ -6,13 +6,19 @@
 */
 int check_cycle(listint_t *list)
 {
-	listint_t *current = list->next,  *first = list;
-	int i;
+	listint_t *current = list, *checker;
+	int i, j;
+
 
 	for (i = 0; current != NULL; i++)
 	{
-		if (current == first)
-			return (1);
+		checker = list;
+		for (j = 0; j < i; j++)
+		{
+			if (current == checker)
+				return (1);
+			checker = checker->next;
+		}
 		current = current->next;
 	}
 	return (0);
