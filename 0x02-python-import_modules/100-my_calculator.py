@@ -19,4 +19,4 @@ if __name__ == '__main__':
         '/': div,
         }
 
-    print("{} {} {} = {}".format(a, opr, b, ops[opr](a, b)))
+    print("{:d} {} {:d} = {:d}".format(a, opr, b, ops[opr](a, b)))
