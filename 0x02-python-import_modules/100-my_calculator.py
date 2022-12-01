@@ -19,4 +19,4 @@ if __name__ == '__main__':
         '/': div,
         }
 
-    print(f"{a} {opr} {b} = {ops[opr](a, b)}")
+    print("{} {} {} = {}".format(a, opr, b, ops[opr](a, b)))
