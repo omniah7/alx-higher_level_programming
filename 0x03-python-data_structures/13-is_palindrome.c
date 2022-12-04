@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * is_palindrome - frees a listint_t list
+ * is_palindrome - checks if a singly linked list is a palindrome
  * @head: pointer to pointer of first node of listint_t list
  * Return: 0 if it is not a palindrome, 1 if it is a palindrome
  */
