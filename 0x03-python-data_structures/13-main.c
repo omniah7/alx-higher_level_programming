@@ -11,7 +11,7 @@ int main(void)
 	{
 	listint_t *head;
 	int arr1[] = {1, 17, 972, 50, 98, 98, 50, 972, 17, 1};
-	int arr2[] = {3};
+
 
 	head = NULL;
 	for (int i = 0; i < 10; i++)
