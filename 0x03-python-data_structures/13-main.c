@@ -8,7 +8,7 @@
  * Return: Always 0.
  */
 int main(void)
-	{
+{
 	listint_t *head;
 	int arr1[] = {1, 17, 972, 50, 98, 98, 50, 972, 17, 1};
 
