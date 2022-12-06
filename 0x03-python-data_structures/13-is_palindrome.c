@@ -11,7 +11,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *current = (*head);
 	int *list;
-	int i;
+	int i, j;
 
 	if (current == NULL || current->next == NULL)
 	{
@@ -34,7 +34,7 @@ int is_palindrome(listint_t **head)
 		list[i] = current->n;
 	}
 
-	for (int j = 0; j < i / 2; j++)
+	for (j = 0; j < i / 2; j++)
 	{
 		if (list[j] != list[i - j - 1])
 		{
