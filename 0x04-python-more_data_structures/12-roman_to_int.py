@@ -14,13 +14,13 @@ def roman_to_int(roman):
     sum = nums[roman[0]]
     for i in range(1, len(roman)):
         if roman[i] in "VX" and roman[i-1] == 'I':
-            sum += nums[roman[i]] - (nums['I'] if i != 1 else 2)
+            sum += nums[roman[i]] - (nums['I'] if i != 1 else nums['I']*2)
             continue
         if roman[i] in "CL" and roman[i-1] == 'X':
-            sum += nums[roman[i]] - nums['X']
+            sum += nums[roman[i]] - (nums['X'] if i != 1 else nums['X']*2)
             continue
         if roman[i] in "DM" and roman[i-1] == 'C':
-            sum += nums[roman[i]] - nums['C']
+            sum += nums[roman[i]] - (nums['C'] if i != 1 else nums['C']*2)
             continue
         sum += nums[roman[i]]
     return sum
