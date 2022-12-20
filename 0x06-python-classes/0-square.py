@@ -3,4 +3,5 @@
 
 
 class Square:
+    """don't do anything"""
     pass
