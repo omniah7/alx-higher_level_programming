@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""a class Square that defines a square by: (based on 2-square.py)"""
+"""Square module"""
 
 
 class Square:
+    """square class"""
+
     def __init__(self, size=0):
         """defines a square
             Args:
@@ -17,7 +19,7 @@ class Square:
     
     def area(self):
         """the square area
-        Return:
-            area of the square
+            Return:
+                area of the square
         """
         return self.__size**2
