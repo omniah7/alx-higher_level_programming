@@ -1,5 +1,0 @@
-#!/usr/bin/bash
-for i in {0..9};
-do
-    echo '#!/usr/bin/python3' >> "$i-rectangle.py"
-done
