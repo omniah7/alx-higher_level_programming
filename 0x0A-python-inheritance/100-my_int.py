@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Myint module"""
 
 
 class MyInt(int):

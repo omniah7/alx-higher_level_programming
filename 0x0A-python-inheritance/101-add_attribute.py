@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""add_attribute function"""
 
 
 def add_attribute(self, attr, value):
