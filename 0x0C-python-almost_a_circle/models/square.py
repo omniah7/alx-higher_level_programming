@@ -10,18 +10,16 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """Square constructor"""
         super().__init__(size, size, x, y, id)
-        self.size = size
 
     @property
     def size(self):
         """size property"""
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, s):
         self.width = s
         self.height = s
-        self.__size = self.width
 
     def __str__(self):
         """str representation of the rectangle"""
