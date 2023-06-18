@@ -1,0 +1,32 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer(0, 0)
+0
+>>> add_integer(4, 0)
+4
+>>> add_integer(0, 4)
+4
+
+>>> add_integer(-2, 4)
+2
+>>> add_integer(0, -2)
+-2
+
+>>> add_integer(2.3, 2.7)
+4
+>>> add_integer(2.4, 2)
+4
+
+>>> add_integer(2.3, '234')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(65656.56747646476, 230)
+65886
+
