@@ -30,3 +30,24 @@ TypeError: b must be an integer
 >>> add_integer(65656.56747646476, 230)
 65886
 
+>>> add_integer(32)
+130
+
+>>> add_integer(b=32)
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer(float('nan'),7)
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(1.4407807929942597e+154**2, 7)
+Traceback (most recent call last):       
+...
+OverflowError: (34, 'Numerical result out of range')
+
+
+
+
