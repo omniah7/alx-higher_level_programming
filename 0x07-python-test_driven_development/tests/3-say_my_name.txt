@@ -1,12 +1,13 @@
-Testing 'say_my_name' Function
-
+=================================
+ Testing 'say_my_name' Function
+=================================
 
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 >>> say_my_name("John", "Smith")
 My name is John Smith
 
->>> say_my_name("", "") # doctest : +REPORT_UDIFF
+>>> say_my_name("", "")
 My name is  
 
 >>> say_my_name('g', 's')
@@ -27,6 +28,11 @@ TypeError: first_name must be a string
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
+
+>>> say_my_name("Smith", 43.5)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
 
 >>> say_my_name()
 Traceback (most recent call last):
