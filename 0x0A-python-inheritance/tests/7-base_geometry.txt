@@ -36,7 +36,7 @@ TypeError: wish must be an integer
 
 >>> bg. integer_validator("hg", True)
 Traceback (most recent call last):
-TypeError: age must be an integer
+TypeError: hg must be an integer
 
 >>> bg.integer_validator("wish", {6, 7})
 Traceback (most recent call last):
@@ -44,7 +44,7 @@ TypeError: wish must be an integer
 
 >>> bg.integer_validator("z", {6,})
 Traceback (most recent call last):
-TypeError: age must be an integer
+TypeError: z must be an integer
 
 >>> print(bg) # doctest: +ELLIPSIS
 <7-base_geometry.BaseGeometry object at 0x...>
