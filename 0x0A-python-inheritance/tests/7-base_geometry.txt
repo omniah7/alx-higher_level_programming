@@ -12,6 +12,10 @@ Exception: area() is not implemented
 
 >>> bg.integer_validator(None, 3)
 
+>>> bg.integer_validator("g", None)
+Traceback (most recent call last):
+TypeError: g must be an integer
+
 >>> bg.integer_validator("", 3)
 
 >>> bg.integer_validator("name", "John")
