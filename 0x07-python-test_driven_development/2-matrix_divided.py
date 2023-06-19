@@ -16,9 +16,9 @@ def matrix_divided(matrix, div):
         a new matrix with elements rounded to 2 decimal places.
     """
     if not (isinstance(matrix, list)
-            and all(isinstance(l, list) for l in matrix)
+            and all(isinstance(r, list) for r in matrix)
             and all(isinstance(i, int) or isinstance(i, float)
-            for l in matrix for i in l)):
+            for r in matrix for i in r)):
         raise TypeError(
             'matrix must be a matrix (list of lists) of integers/floats'
             )
