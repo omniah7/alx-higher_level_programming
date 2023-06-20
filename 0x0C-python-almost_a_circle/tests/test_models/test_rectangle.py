@@ -155,8 +155,30 @@ class test_base(unittest.TestCase):
         self.assertEqual(r1.width, 2)
         self.assertEqual(r1.x, 3)
         self.assertEqual(r1.id, 89)
-        r1.update(x=1, height=2, y=3, width=4)
+        r1.update(**{'x': 1, 'height': 2, 'y': 3, 'width': 4})
         self.assertEqual(r1.x, 1)
         self.assertEqual(r1.height, 2)
         self.assertEqual(r1.y, 3)
         self.assertEqual(r1.width, 4)
+
+    def test_to_dictionary(self):
+        """test converting into a dictionary"""
+        pass
+
+    def test_create(self):
+        """test cresting dictionaries"""
+        # r = Rectangle.create(**{ 'id': 89 })
+
+        # r = Rectangle.create(**{ 'id': 89, 'width': 1 })
+
+        # r = Rectangle.create(**{ 'id': 89, 'width': 1, 'height': 2 })
+
+        # Rectangle.create(**{ 'id': 89, 'width': 1, 'height': 2, 'x': 3 })
+
+        r = Rectangle.create(
+            **{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
+        self.assertEqual(r.x, 3)
+        self.assertEqual(r.id, 89)
+        self.assertEqual(r.height, 2)
+        self.assertEqual(r.y, 4)
+        self.assertEqual(r.width, 1)

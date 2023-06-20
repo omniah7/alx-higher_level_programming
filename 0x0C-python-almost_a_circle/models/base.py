@@ -35,7 +35,7 @@ class Base:
         if list_objs is not None:
             list_objs = [obj.to_dictionary() for obj in list_objs]
         with open(f"{cls.__name__}.json", 'w') as f:
-            f.write(Base.to_json_string(list_objs))
+            f.write(cls.to_json_string(list_objs))
 
     @staticmethod
     def from_json_string(json_string):
