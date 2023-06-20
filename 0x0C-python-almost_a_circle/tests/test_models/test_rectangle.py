@@ -163,18 +163,12 @@ class test_base(unittest.TestCase):
 
     def test_to_dictionary(self):
         """test converting into a dictionary"""
-        pass
+        r = Rectangle(8, 7, 0, 0, 12)
+        self.assertEqual(r.to_dictionary(), {'id': 12, 'width': 8,
+                'height': 7, 'x': 0, 'y': 0})
 
     def test_create(self):
         """test cresting dictionaries"""
-        # r = Rectangle.create(**{ 'id': 89 })
-
-        # r = Rectangle.create(**{ 'id': 89, 'width': 1 })
-
-        # r = Rectangle.create(**{ 'id': 89, 'width': 1, 'height': 2 })
-
-        # Rectangle.create(**{ 'id': 89, 'width': 1, 'height': 2, 'x': 3 })
-
         r = Rectangle.create(
             **{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
         self.assertEqual(r.x, 3)
@@ -182,3 +176,16 @@ class test_base(unittest.TestCase):
         self.assertEqual(r.height, 2)
         self.assertEqual(r.y, 4)
         self.assertEqual(r.width, 1)
+
+    def test_save_to_file(self):
+        """test save_to_file function"""
+        # Rectangle.save_to_file(None)
+        # Rectangle.save_to_file([])
+        # Rectangle.save_to_file([Rectangle(1, 2)])
+        pass
+
+    def test_load_from_file(self):
+        """test load_from_file function"""
+        # Rectangle.load_from_file(None)
+        # Rectangle.load_from_file()      
+        pass
